@@ -1,0 +1,819 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_ORACLE_DATABASE (HR SAMPLE)",
+      "label": "Oracle Database (HR Sample)",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "grafana-oracle-datasource",
+      "pluginName": "Oracle Database"
+    },
+    {
+      "name": "DS_ORACLE_DATABASE (HR SAMPLE)-FOR-LIBRARY-PANEL",
+      "label": "Oracle Database (HR Sample)",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "grafana-oracle-datasource",
+      "pluginName": "Oracle Database",
+      "usage": {
+        "libraryPanels": [
+          {
+            "name": "Empty Space",
+            "uid": "cec158b0-5b01-4577-b5a3-3e0f76ddf2b7"
+          },
+          {
+            "name": "Empty Space",
+            "uid": "cec158b0-5b01-4577-b5a3-3e0f76ddf2b7"
+          },
+          {
+            "name": "Empty Space",
+            "uid": "cec158b0-5b01-4577-b5a3-3e0f76ddf2b7"
+          }
+        ]
+      }
+    }
+  ],
+  "__elements": {
+    "cec158b0-5b01-4577-b5a3-3e0f76ddf2b7": {
+      "name": "Empty Space",
+      "uid": "cec158b0-5b01-4577-b5a3-3e0f76ddf2b7",
+      "kind": 1,
+      "model": {
+        "datasource": {
+          "type": "grafana-oracle-datasource",
+          "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)-FOR-LIBRARY-PANEL}"
+        },
+        "description": "",
+        "libraryPanel": {
+          "name": "Empty Space",
+          "uid": "cec158b0-5b01-4577-b5a3-3e0f76ddf2b7"
+        },
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "",
+          "mode": "markdown"
+        },
+        "pluginVersion": "10.3.0-64399",
+        "transparent": true,
+        "type": "text",
+        "targets": [
+          {
+            "refId": "A",
+            "datasource": {
+              "type": "grafana-oracle-datasource",
+              "uid": "aaa89da5-cfeb-40b2-b583-b31f85656d53"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "__requires": [
+    {
+      "type": "panel",
+      "id": "barchart",
+      "name": "Bar chart",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "geomap",
+      "name": "Geomap",
+      "version": ""
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "10.3.0-64399"
+    },
+    {
+      "type": "datasource",
+      "id": "grafana-oracle-datasource",
+      "name": "Oracle Database",
+      "version": "2.7.1"
+    },
+    {
+      "type": "panel",
+      "id": "stat",
+      "name": "Stat",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "table",
+      "name": "Table",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "text",
+      "name": "Text",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "timeseries",
+      "name": "Time series",
+      "version": ""
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Sample dashboard using Oracle DB HR sample table",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "collapsed": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 22,
+      "panels": [],
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Employee Insights",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "grafana-oracle-datasource",
+        "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 4,
+        "x": 0,
+        "y": 1
+      },
+      "id": 85,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "\n\n<center><img height=300 align=\"center\" src=\"https://www.clipartkey.com/mpngs/m/162-1627477_number-of-employees-icon.png\" ></center>",
+        "mode": "markdown"
+      },
+      "pluginVersion": "10.3.0-64399",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "grafana-oracle-datasource",
+        "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "blue",
+            "mode": "shades"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 5,
+        "x": 4,
+        "y": 1
+      },
+      "id": 78,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.3.0-64399",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-oracle-datasource",
+            "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+          },
+          "format": "table",
+          "rawSql": "SELECT COUNT(*) AS TotalEmployees\nFROM HR.EMPLOYEES",
+          "refId": "A"
+        }
+      ],
+      "title": "TOTAL Employees",
+      "type": "stat"
+    },
+    {
+      "gridPos": {
+        "h": 9,
+        "w": 1,
+        "x": 9,
+        "y": 1
+      },
+      "id": 82,
+      "libraryPanel": {
+        "uid": "cec158b0-5b01-4577-b5a3-3e0f76ddf2b7",
+        "name": "Empty Space"
+      }
+    },
+    {
+      "datasource": {
+        "type": "grafana-oracle-datasource",
+        "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "blue",
+            "mode": "shades"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "series",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 20,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 14,
+        "x": 10,
+        "y": 1
+      },
+      "id": 76,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "10.3.0-64399",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-oracle-datasource",
+            "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+          },
+          "format": "time_series",
+          "rawSql": "select hire_date, sum(count(employee_id)) over (order by hire_date rows between unbounded preceding and current row) as total_emp\nfrom hr.employees\ngroup by hire_date \norder by hire_date",
+          "refId": "A"
+        }
+      ],
+      "title": "Total Employees Over time",
+      "type": "timeseries"
+    },
+    {
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 10
+      },
+      "id": 86,
+      "libraryPanel": {
+        "uid": "cec158b0-5b01-4577-b5a3-3e0f76ddf2b7",
+        "name": "Empty Space"
+      }
+    },
+    {
+      "datasource": {
+        "type": "grafana-oracle-datasource",
+        "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 10,
+        "x": 0,
+        "y": 11
+      },
+      "id": 80,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "horizontal",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xField": "DEPARTMENT_NAME",
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "10.3.0-64399",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-oracle-datasource",
+            "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+          },
+          "format": "time_series",
+          "rawSql": "SELECT D.DEPARTMENT_ID, D.DEPARTMENT_NAME, COUNT(*) AS TotalEmployees\nFROM HR.EMPLOYEES E\nJOIN HR.DEPARTMENTS D ON E.DEPARTMENT_ID = D.DEPARTMENT_ID\nGROUP BY D.DEPARTMENT_ID, D.DEPARTMENT_NAME\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Employees Distribution",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "DEPARTMENT_NAME",
+                "TOTALEMPLOYEES"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-oracle-datasource",
+        "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "purple",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 14,
+        "x": 10,
+        "y": 11
+      },
+      "id": 79,
+      "options": {
+        "basemap": {
+          "config": {
+            "server": "ocean"
+          },
+          "name": "Layer 0",
+          "type": "esri-xyz"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": true,
+              "style": {
+                "color": {
+                  "field": "TOTALEMPLOYEES",
+                  "fixed": "dark-green"
+                },
+                "opacity": 0.8,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "field": "TOTALEMPLOYEES",
+                  "fixed": 5,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "fixed": "img/icons/marker/circle.svg",
+                  "mode": "fixed"
+                },
+                "symbolAlign": {
+                  "horizontal": "center",
+                  "vertical": "center"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "location": {
+              "lookup": "COUNTRY_ID",
+              "mode": "lookup"
+            },
+            "name": "Layer 1",
+            "tooltip": true,
+            "type": "markers"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "zero",
+          "lat": 0,
+          "lon": 0,
+          "zoom": 1
+        }
+      },
+      "pluginVersion": "10.3.0-64399",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-oracle-datasource",
+            "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+          },
+          "format": "table",
+          "rawSql": "SELECT C.COUNTRY_ID, COUNT(*) AS TotalEmployees\nFROM HR.EMPLOYEES E\nJOIN HR.DEPARTMENTS D ON E.DEPARTMENT_ID = D.DEPARTMENT_ID\nJOIN HR.LOCATIONS L ON D.LOCATION_ID = L.LOCATION_ID\nJOIN HR.COUNTRIES C ON L.COUNTRY_ID = C.COUNTRY_ID\nGROUP BY C.COUNTRY_ID\n",
+          "refId": "A"
+        }
+      ],
+      "title": "TOTAL Employee per Country",
+      "transparent": true,
+      "type": "geomap"
+    },
+    {
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 24
+      },
+      "id": 83,
+      "libraryPanel": {
+        "uid": "cec158b0-5b01-4577-b5a3-3e0f76ddf2b7",
+        "name": "Empty Space"
+      }
+    },
+    {
+      "datasource": {
+        "type": "grafana-oracle-datasource",
+        "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "color-background"
+            },
+            "filterable": true,
+            "inspect": true
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 25
+      },
+      "id": 2,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": true,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "10.3.0-64399",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-oracle-datasource",
+            "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+          },
+          "format": "table",
+          "rawSql": "SELECT *\nFROM HR.EMPLOYEES\nORDER BY HIRE_DATE DESC",
+          "refId": "A"
+        }
+      ],
+      "title": "List of Employee",
+      "type": "table"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 38
+      },
+      "id": 81,
+      "panels": [
+        {
+          "description": "",
+          "gridPos": {
+            "h": 20,
+            "w": 7,
+            "x": 0,
+            "y": 39
+          },
+          "id": 74,
+          "options": {
+            "code": {
+              "language": "plaintext",
+              "showLineNumbers": false,
+              "showMiniMap": false
+            },
+            "content": "The installed example data is the Oracle example HR schema database. \nDocumentation can be found here: https://docs.oracle.com/en/database/oracle/oracle-database/23/comsc/schema-diagrams.html#GUID-01BFEF14-C6BD-42CD-8558-DDD214DB3AE0__CIHGFFHI\n\n![HR Schema](https://docs.oracle.com/en/database/oracle/oracle-database/23/comsc/img/comsc008.gif)",
+            "mode": "markdown"
+          },
+          "pluginVersion": "10.3.0-64399",
+          "title": "HR schema",
+          "type": "text"
+        },
+        {
+          "datasource": {
+            "type": "grafana-oracle-datasource",
+            "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "custom": {
+                "align": "auto",
+                "cellOptions": {
+                  "type": "auto"
+                },
+                "inspect": false
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 20,
+            "w": 17,
+            "x": 7,
+            "y": 39
+          },
+          "id": 4,
+          "options": {
+            "cellHeight": "sm",
+            "footer": {
+              "countRows": false,
+              "fields": "",
+              "reducer": [
+                "sum"
+              ],
+              "show": false
+            },
+            "showHeader": true
+          },
+          "pluginVersion": "10.3.0-64399",
+          "targets": [
+            {
+              "datasource": {
+                "type": "grafana-oracle-datasource",
+                "uid": "${DS_ORACLE_DATABASE (HR SAMPLE)}"
+              },
+              "format": "time_series",
+              "rawSql": "select tab.owner as schema_name,\n       tab.table_name as table_name,      \n       tab.num_rows\n  from all_tables tab\n where tab.owner not in ('ANONYMOUS','CTXSYS','DBSNMP','EXFSYS',\n 'LBACSYS', 'MDSYS','MGMT_VIEW','OLAPSYS','OWBSYS','ORDPLUGINS',\n 'ORDSYS','OUTLN', 'SI_INFORMTN_SCHEMA','SYS','SYSMAN','SYSTEM',\n 'TSMSYS','WK_TEST','WKSYS', 'WKPROXY','WMSYS','XDB','APEX_040000',\n 'APEX_PUBLIC_USER','DIP', 'FLOWS_30000','FLOWS_FILES','MDDATA',\n 'ORACLE_OCM','SPATIAL_CSW_ADMIN_USR', 'SPATIAL_WFS_ADMIN_USR',\n 'XS$NULL','PUBLIC')\n   and tab.owner = 'HR' \n order by tab.owner, \n       tab.table_name",
+              "refId": "A"
+            }
+          ],
+          "title": "HR tables",
+          "type": "table"
+        }
+      ],
+      "title": "HR DB Schema",
+      "type": "row"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "2011-01-13T00:00:00.000Z",
+    "to": "2018-04-21T00:00:00.000Z"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Employee Insights Dashboard - FINAL",
+  "uid": "d467d006-4d03-4e9c-9654-068c45d97282",
+  "version": 12,
+  "weekStart": ""
+}
